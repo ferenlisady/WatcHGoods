@@ -1,0 +1,370 @@
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: white;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    top: 0; right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 7%;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.119);
+    z-index: 1000;
+}
+
+header .logo{
+    font-size: 2rem;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header .navbar a{
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    transition: 0.3s ease;
+}
+
+header .navbar a:hover{
+    color: #24262b;
+}
+
+header .navbar a.active::after{
+    content: "";
+    width: 60%;
+    height: 2px;
+    background: black;
+    position: absolute;
+    justify-content: space-between;
+    bottom: -4px;
+    left: 20px;
+}
+
+.pictute{
+    margin-top: 3vw;
+    display: flex;
+    height: 29.143vw;
+}
+
+h1{
+    color:rgba(205, 199, 199, 0.903);
+    font-size: 5vw;
+    letter-spacing: 6px;
+    margin-top: -18vw;
+    text-align: center;
+}
+
+#title2{
+    color:black;
+    font-size: 2.5vw;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 15vw;
+}
+
+#title2 p{
+    color:black;
+    margin-top: 2vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    margin-bottom: 3vw;
+    font-size: 1.2vw;
+    letter-spacing: -.01px;
+    line-height: 1.6vw;
+    text-align: center;
+}
+
+.container{
+    max-width: 1176px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style: none;
+}
+
+.footer{
+    background-color:#0C0C0C;
+    padding: 70px 0;
+}
+
+.footer-col{
+    width: 20%;
+    padding: 0 15px;;
+}
+
+.footer-col h7{
+    font-size: 18px;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    margin-bottom: 15px;
+    transition: citizen 0.3s ease;
+}
+
+.footer-col p{
+    font-size: 12px;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    margin-bottom: 5px;
+    transition: citizen 0.3s ease;
+}
+
+.footer-col h5{
+    font-size: 18px;
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h5::before{
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #cac8c9;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+h6{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 15px;
+    text-align: center;
+    color: #bbbbbb;
+    margin-top: 50px;
+    font-weight: 300;
+    position: relative;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: citizen 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+    color: white;
+    font-weight: 500;
+}
+
+.footer-col .social-media a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color:rgba(255,255,255,0.2);
+    margin: 0 5px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: white;
+    transition: citizen 0.5s ease;
+}
+
+.footer-col .social-media a:hover{
+    color: #24262b;
+    background-color: white;
+}
+
+header #toggle{
+    display: none;
+}
+
+header .fa-bars{
+    font-size: 2rem;
+    color: #333;
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0,0,0,.3);
+    display: none;
+
+}
+
+/*desktop*/
+@media (min-width: 1400px){
+    
+    html{
+        font-size: 100%;
+    }
+
+    header{
+        padding: 10px 7%;
+    }
+
+    .footer{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+/*tablet*/
+@media (max-width: 800px){
+    
+    html{
+        font-size: 55%;
+    }
+
+    header{
+        padding: 2px 3%;
+    }
+
+    header .logo{
+        font-size: 3rem;
+        color: black;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    
+    header .navbar a{
+        padding: 0 6px;
+        font-size: 14px;
+    }
+
+    header .navbar a.active::after{
+        content: "";
+        width: 70%;
+        height: 2px;
+        background: black;
+        position: absolute;
+        justify-content: space-between;
+        bottom: -4px;
+        left: 7px;
+    }
+
+    h1{
+        color:rgba(205, 199, 199, 0.903);
+        font-size: 5vw;
+        letter-spacing: 6px;
+        margin-top: -18vw;
+        text-align: center;
+    }
+    
+    .footer{
+        padding-left: 40px;
+        padding-right: 10px;
+    }
+    
+    .footer-col .social-media a{
+        font-size: 15px;
+    }
+}
+
+/*phone*/
+@media (max-width: 480px) {
+
+    header .logo{
+        margin-right: 150px;
+        
+    }
+
+    header .fa-bars{
+        display: block;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #fff;
+        border-top: .1rem solid rgba(0,0,0,0.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);  
+    }
+
+    header #toggle:checked ~ .navbar{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);  
+    }
+
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border: .1px solid rgba(0,0,0,0.1);
+        display: block;
+    }
+
+    header .navbar a.active::after{
+        content: "";
+        width: 9%;
+        height: 2px;
+        background: black;
+        position: absolute;
+        justify-content: space-between;
+        bottom: 8px;
+        left: 12px;
+    }
+
+    h1{
+        color:rgba(205, 199, 199, 0.903);
+        font-size: 5vw;
+        letter-spacing: 6px;
+        margin-top: -13vw;
+        text-align: center;
+    }
+
+    #title2{
+        color:black;
+        font-size: 2.5vw;
+        letter-spacing: 2px;
+        text-align: center;
+        margin-top: 10vw;
+    }
+
+    .footer{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .footer-col{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .footer-col .social-media a{
+        font-size: 15px;
+    }
+}
